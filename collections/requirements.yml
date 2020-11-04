@@ -1,0 +1,11 @@
+---
+collections:
+- name: ansible.tower
+  version: '3.7.3'
+# source: https://cloud.redhat.com/ansible/automation-hub/
+
+# Install a collection from Ansible Galaxy.
+- name: servicenow.servicenow
+  version: 1.0.2
+  source: https://galaxy.ansible.com
+

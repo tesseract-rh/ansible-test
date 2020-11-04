@@ -1,0 +1,19 @@
+---
+- name: Playbook for Using a Variety of Tower Modules
+  hosts: tower
+  vars:
+    ansible_python_interpreter: /usr/bin/python3
+  collections:
+    - ansible.tower
+
+  tasks:
+
+  - name: Add tower group
+    tower_group:
+      name: new-group
+      inventory: inventory-tower
+      hosts: 
+        - "192.168.122.122"
+        - "192.168.122.116"
+      state: present
+      tower_config_file: "/etc/tower/tower_cli.cfg"
